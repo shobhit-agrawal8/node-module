@@ -10,5 +10,5 @@ server.on("request", (req, res) => {
   res.end("Hello World");
 });
 
-server.listen(5000);
+server.listen(5000, console.log("Server is running at port 5000"));
 // https has method of event emitter like on

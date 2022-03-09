@@ -7,10 +7,11 @@ const server = http.createServer((req, res) => {
   if (req.url === "/about") {
     res.end("This is the about page of the website ");
   }
-  res.end(`
+  res.write(`
   <p>Opps the page is not found</p>
   <a href="/">Back home</a>
   `);
+  res.end();
 });
 
 server.listen(3000, () => console.log("Server is running at port 3000"));
